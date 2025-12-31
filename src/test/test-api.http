@@ -1,0 +1,30 @@
+### 测试1：获取所有用户
+GET http://localhost:8080/api/users
+Accept: application/json
+
+### 测试2：创建新用户
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "测试用户",
+  "email": "test@example.com",
+  "age": 25
+}
+
+### 测试3：获取单个用户（先运行POST获取ID）
+GET http://localhost:8080/api/users/5
+Accept: application/json
+
+### 测试4：更新用户
+PUT http://localhost:8080/api/users/5
+Content-Type: application/json
+
+{
+  "name": "更新后的名字",
+  "email": "updated@example.com",
+  "age": 30
+}
+
+### 测试5：删除用户
+DELETE http://localhost:8080/api/users/5
